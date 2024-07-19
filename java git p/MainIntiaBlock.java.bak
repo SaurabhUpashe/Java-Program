@@ -1,0 +1,56 @@
+
+class IntiaBlock
+{
+	private int x;
+	private double y;
+	{
+		System.out.println("**************Allocate Memory********");
+	}
+	public IntiaBlock()
+	{
+		System.out.println("It is default Constructer: ");
+		x=1;
+		y=47.23;
+	}
+	public IntiaBlock(int x)
+	{
+		System.out.println("its is parameterized Constructer one: ");
+		this.x=x;
+	}
+	public IntiaBlock(int x,double a)
+	{
+		System.out.println("its is parameterized Constructer Two: ");
+		this.x=x;
+		y=a;
+	}
+	public IntiaBlock(IntiaBlock p)
+	{
+		System.out.println("its is Copy Constructer : ");
+		x=p.x;
+		y=p.y;
+	}
+	public void show()
+	{
+		System.out.println("X = "+x+"\t y = "+y);
+	}
+} 
+class MainIntiaBlock 
+{
+	public static void main(String[] args) 
+	{
+		IntiaBlock d=new IntiaBlock();
+		d.show();
+
+		IntiaBlock d1=new IntiaBlock(22);
+		d1.show();
+
+		IntiaBlock d2=new IntiaBlock(132,88.96);
+		d2.show();
+
+		IntiaBlock d3=new IntiaBlock(d1);
+		d3.show();
+
+		IntiaBlock d4=new IntiaBlock(d2);
+		d4.show();
+	}
+}

@@ -1,0 +1,32 @@
+class DefaultConstructerSecond
+{
+	private int x;
+	public DefaultConstructerSecond()
+	{
+		System.out.println("Its is default constructer");
+		x=1;
+		y=10;
+	
+	public void output()
+	{
+		System.out.println(" value of X: "+x);
+	}
+}
+class MainDefaultConstructerSecond 
+{
+	public static void main(String[] args) 
+	{
+		DefaultConst d=new DefaultConstructerSecond ();
+		d.output();
+
+		DefaultConst d1=new DefaultConstructerSecond ();
+		d1.output();
+
+		DefaultConst d2=new DefaultConstructerSecond ();
+		d2.output();
+
+		DefaultConst d3=new DefaultConstructerSecond ();
+		d3.output();
+
+	}
+}

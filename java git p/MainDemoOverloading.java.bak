@@ -1,0 +1,55 @@
+import java.util.*;
+class DemoOverloading
+{
+	private int x;
+	private double y;
+	public DemoOverloading()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the value of X : ");
+		x=sc.nextInt();
+		System.out.println("Enter the value of Y : ");
+		y=sc.nextDouble();
+	}
+	public DemoOverloading(int x,double y)
+	{
+		System.out.println("its is parameterized Constructer one: ");
+		this.x=x;
+		this.y=y;
+	}
+	public DemoOverloading(double a)
+	{
+		System.out.println("its is parameterized Constructer Two: ");
+		y=a;
+	}
+	public DemoOverloading(DemoOverloading p)
+	{
+		System.out.println("its is Copy Constructer : ");
+		x=p.x;
+		y=p.y;
+	}
+	public void show()
+	{
+		System.out.println("X = "+x+"\t y = "+y);
+	}
+} 
+class MainDemoOverloading 
+{
+	public static void main(String[] args) 
+	{
+		DemoOverloading d=new DemoOverloading();
+		d.show();
+
+		DemoOverloading d1=new DemoOverloading(22,56.3);
+		d1.show();
+
+		DemoOverloading d2=new DemoOverloading(88.96);
+		d2.show();
+
+		DemoOverloading d3=new DemoOverloading(d1);
+		d3.show();
+
+		DemoOverloading d4=new DemoOverloading(d2);
+		d4.show();
+	}
+}
